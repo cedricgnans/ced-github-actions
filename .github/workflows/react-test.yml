@@ -15,5 +15,7 @@ jobs:
           cd Starting-Project/second-action-react-demo
           npm ci
       - name: Run tests
-        run: npm test 
+        run: |
+          cd Starting-Project/second-action-react-demo
+          npm test 
         
