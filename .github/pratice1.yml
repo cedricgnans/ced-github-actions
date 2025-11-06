@@ -22,4 +22,7 @@ jobs:
           cd Starting-Project/Practice-Project1
           npm test
 
-#      - name: Lint the project
+      - name: Lint the project
+        run: |
+          cd Starting-Project/Practice-Project1
+          npm run lint
