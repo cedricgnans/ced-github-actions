@@ -1,0 +1,25 @@
+name: Exercise Workflow
+on: [push,workflow_dispatch]
+jobs:
+  test-and-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get the code
+        uses: actions/checkout@v5
+
+      - name: Install Node JS
+        uses: actions/setupnode@v5
+        with: 
+          node-version: '18' 
+
+      - name: Install The Project
+        run: | 
+          cd Starting-Project/Practice-Project1
+          npm Install
+
+      - name: Run the tests
+        run: | 
+          cd Starting-Project/Practice-Project1
+          npm test
+
+#      - name: Lint the project
